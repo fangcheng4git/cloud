@@ -43,7 +43,7 @@ public class OrderController {
         if(entity.getStatusCode().is2xxSuccessful()){
             return entity.getBody();
         } else {
-            return new CommonResult<>(444,"插入数据失败！");
+            return new CommonResult<Payment>(444,"插入数据失败！");
         }
     }
 
@@ -60,7 +60,7 @@ public class OrderController {
         if(entity.getStatusCode().is2xxSuccessful()) {
             return entity.getBody();
         } else {
-            return new CommonResult<>(444,"操作失败！");
+            return new CommonResult<Payment>(444,"操作失败！");
         }
     }
 
